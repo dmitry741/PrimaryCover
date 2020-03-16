@@ -30,11 +30,6 @@ namespace PDPrimaryNumbers
             return ((P << Rem) % N == 1);
         }
 
-        public void Reset()
-        {
-            _primes.Clear();
-        }
-
         public int Next()
         {
             int prime;

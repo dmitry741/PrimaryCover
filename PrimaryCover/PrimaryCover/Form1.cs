@@ -144,8 +144,7 @@ namespace PrimaryCover
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Image image = GenerateBitmap(1024, 1024, PrimaryInterface, GetCellsize());
-            SaveFileDialog dlg = new SaveFileDialog
+            var dlg = new SaveFileDialog
             {
                 Filter = "PNG files (*.png)|*.png",
                 FilterIndex = 0,
@@ -154,6 +153,7 @@ namespace PrimaryCover
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
+                Image image = GenerateBitmap(1024, 1024, PrimaryInterface, GetCellsize());
                 image.Save(dlg.FileName, System.Drawing.Imaging.ImageFormat.Png);
             }
         }

@@ -9,6 +9,11 @@ namespace PDPrimaryNumbers
 {
     public class PrimaryNum : IPrimary
     {
+        /// <summary>
+        /// Метод проверяет необходимое условие простоты числа.
+        /// </summary>
+        /// <param name="N">Натруальное число.</param>
+        /// <returns>true если необходимое условие простоты числа выполяется, false в противном случае.</returns>
         bool FermaCriterium(int N)
         {
             long P = 1;
@@ -29,6 +34,11 @@ namespace PDPrimaryNumbers
             return ((P << Rem) % N == 1);
         }
 
+        /// <summary>
+        /// Метод проверяет достаточное условие простоты числа.
+        /// </summary>
+        /// <param name="N">Натуральное число.</param>
+        /// <returns>tue если число простое, false в пртивоположном случае.</returns>
         bool SimpleCriterium(int N)
         {
             bool result = true;
@@ -77,7 +87,7 @@ namespace PDPrimaryNumbers
             return result;
         }
 
-        public int NextPrimary(int N)
+        public int Next(int N)
         {
             if (N < 2)
                 return 2;
