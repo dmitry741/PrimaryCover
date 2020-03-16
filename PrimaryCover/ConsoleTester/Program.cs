@@ -18,14 +18,6 @@ namespace ConsoleTester
                     Console.WriteLine(i);
             }
 
-            //int N = 1;
-
-            //for (int i = 2; i < 1000; i++)
-            //{
-            //    if (iprimary.FermaCriterium(i) && ! iprimary.SimpleCriterium(i))
-            //        Console.WriteLine(i);
-            //}
-
             Console.ReadLine();
         }
     }

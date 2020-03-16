@@ -139,16 +139,23 @@ namespace PrimaryCover
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Image image = GenerateBitmap(pictureBox1.Width, pictureBox1.Height, PrimaryInterface, GetCellsize());
-            pictureBox1.Image = image;
+            pictureBox1.Image = GenerateBitmap(pictureBox1.Width, pictureBox1.Height, PrimaryInterface, GetCellsize());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Image image = GenerateBitmap(1024, 1024, PrimaryInterface, GetCellsize());
-            image.Save("C:\\Dmitry\\prime1024.png", System.Drawing.Imaging.ImageFormat.Png);
+            SaveFileDialog dlg = new SaveFileDialog
+            {
+                Filter = "PNG files (*.png)|*.png",
+                FilterIndex = 0,
+                RestoreDirectory = true
+            };
 
-            MessageBox.Show("Done!");
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                image.Save(dlg.FileName, System.Drawing.Imaging.ImageFormat.Png);
+            }
         }
     }
 }

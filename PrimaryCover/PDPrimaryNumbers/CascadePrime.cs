@@ -8,7 +8,7 @@ namespace PDPrimaryNumbers
 {
     public class CascadePrime : Base.ICascadePrime
     {
-        List<int> m_primes = new List<int>();
+        List<int> _primes = new List<int>();
 
         bool FermaCriterium(int N)
         {
@@ -32,17 +32,17 @@ namespace PDPrimaryNumbers
 
         public void Reset()
         {
-            m_primes.Clear();
+            _primes.Clear();
         }
 
         public int Next()
         {
             int prime;
-            int count = m_primes.Count();
+            int count = _primes.Count();
 
             if (count > 0)
             {
-                int last = m_primes[count - 1];
+                int last = _primes[count - 1];
                 int N = (last % 2 == 0) ? last + 1 : last + 2;
                
                 while (true)
@@ -56,7 +56,7 @@ namespace PDPrimaryNumbers
                     int root = Convert.ToInt32(Math.Sqrt(N)) + 1;
                     bool bOut = false;
 
-                    foreach (int p in m_primes)
+                    foreach (int p in _primes)
                     {
                         if (p > root)
                             break;
@@ -83,7 +83,7 @@ namespace PDPrimaryNumbers
                 prime = 2;
             }
 
-            m_primes.Add(prime);
+            _primes.Add(prime);
 
             return prime;
         }

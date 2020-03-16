@@ -72,7 +72,6 @@ namespace UnitTestPrimaryNum
             Assert.IsTrue(iprimary.Pi(1000) == 168);
             Assert.IsTrue(iprimary.Pi(10000) == 1229);
             Assert.IsTrue(iprimary.Pi(100000) == 9592);
-            //Assert.IsTrue(iprimary.Pi(1000000) == 78498);
         }
 
         [TestMethod]
@@ -103,20 +102,6 @@ namespace UnitTestPrimaryNum
             }
 
             Assert.IsTrue(iprimary.IsPrimary(P));
-        }
-
-        [TestMethod]
-        public void TestMethod8()
-        {
-            ICascadePrime cascadePrime = new CascadePrime();
-            int P = 0;
-
-            for (int i = 0; i < 10000; i++)
-            {
-                P = cascadePrime.Next();
-            }
-
-            Assert.IsTrue(PrimaryInterface.IsPrimary(P));
         }
     }
 }
