@@ -38,7 +38,7 @@ namespace PDPrimaryNumbers
         /// Метод проверяет достаточное условие простоты числа.
         /// </summary>
         /// <param name="N">Натуральное число.</param>
-        /// <returns>tue если число простое, false в пртивоположном случае.</returns>
+        /// <returns>true если число простое, false в пртивоположном случае.</returns>
         bool SimpleCriterium(int N)
         {
             bool result = true;

@@ -21,10 +21,7 @@ namespace PrimaryCover
 
         #region === private ===
 
-        int GetCellsize()
-        {
-            return (comboBox1.Items.Count > 0) ? Convert.ToInt32(comboBox1.SelectedItem) : 0;
-        }
+        int CellSize => (comboBox1.Items.Count > 0) ? Convert.ToInt32(comboBox1.SelectedItem) : 0;
 
         IPrimary PrimaryInterface => new PrimaryNum();
 
@@ -139,7 +136,7 @@ namespace PrimaryCover
 
         private void button1_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = GenerateBitmap(pictureBox1.Width, pictureBox1.Height, PrimaryInterface, GetCellsize());
+            pictureBox1.Image = GenerateBitmap(pictureBox1.Width, pictureBox1.Height, PrimaryInterface, CellSize);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -153,7 +150,7 @@ namespace PrimaryCover
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                Image image = GenerateBitmap(1024, 1024, PrimaryInterface, GetCellsize());
+                Image image = GenerateBitmap(1024, 1024, PrimaryInterface, CellSize);
                 image.Save(dlg.FileName, System.Drawing.Imaging.ImageFormat.Png);
             }
         }
