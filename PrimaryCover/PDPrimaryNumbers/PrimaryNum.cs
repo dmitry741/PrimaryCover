@@ -42,7 +42,7 @@ namespace PDPrimaryNumbers
         bool SimpleCriterium(int N)
         {
             bool result = true;
-            int N0 = Convert.ToInt32(Math.Sqrt(N)) + 1;
+            int N0 = Convert.ToInt32(Math.Sqrt(N));
 
             for (int d = 5; d < N0; d += 2)
             {
