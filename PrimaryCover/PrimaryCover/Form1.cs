@@ -10,6 +10,11 @@ using System.Windows.Forms;
 using PDPrimaryNumbers.Base;
 using PDPrimaryNumbers;
 
+/* Урок "Распределение простых чисел. Полотно Улама."
+ * Все уроки на http://digitalmodels.ru
+ * 
+ */
+
 namespace PrimaryCover
 {
     public partial class Form1 : Form
