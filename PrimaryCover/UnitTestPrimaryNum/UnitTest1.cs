@@ -8,13 +8,12 @@ namespace UnitTestPrimaryNum
     [TestClass]
     public class UnitTest1
     {
-
         IPrimary PrimaryInterface => new PrimaryNum();
 
         [TestMethod]
+        [Description("проверяем, что мы правильно определяем простоту чисел.")]
         public void TestMethod1()
         {
-            // проверяем, что мы правильно определяем простоту чисел.
             IPrimary iprimary = PrimaryInterface;
 
             Assert.IsTrue(iprimary.IsPrimary(2));
@@ -29,9 +28,9 @@ namespace UnitTestPrimaryNum
         }
 
         [TestMethod]
+        [Description("проверяем, что мы правильно определяем то, что число является составным.")]
         public void TestMethod2()
         {
-            // проверяем, что мы правильно определяем то, что число является составным.
             IPrimary iprimary = PrimaryInterface;
 
             Assert.IsFalse(iprimary.IsPrimary(6));
@@ -45,9 +44,9 @@ namespace UnitTestPrimaryNum
         }
 
         [TestMethod]
+        [Description("проверяем, что мы правильно находим следующее простое число.")]
         public void TestMethod3()
         {
-            // проверяем, что мы правильно находим следующее простое число.
             IPrimary iprimary = PrimaryInterface;
 
             Assert.IsTrue(iprimary.Next(4) == 5);
@@ -57,9 +56,9 @@ namespace UnitTestPrimaryNum
         }
 
         [TestMethod]
+        [Description("проверяем, что мы правильно находим следующее простое число.")]
         public void TestMethod4()
         {
-            // проверяем, что мы правильно находим следующее простое число.
             IPrimary iprimary = PrimaryInterface;
 
             Assert.IsFalse(iprimary.Next(4) == 7);
@@ -67,9 +66,9 @@ namespace UnitTestPrimaryNum
         }
 
         [TestMethod]
+        [Description("проверяем, что мы правильно находим количество простых чисел меньших заданного.")]
         public void TestMethod5()
         {
-            // проверяем, что мы правильно находим количество простых чисел меньших заданного.
             IPrimary iprimary = PrimaryInterface;
 
             Assert.IsTrue(iprimary.Pi(10) == 4);
@@ -80,9 +79,9 @@ namespace UnitTestPrimaryNum
         }
 
         [TestMethod]
+        [Description("проверяем, что мы правильно находим следующее простое число.")]
         public void TestMethod6()
         {
-            // проверяем, что мы правильно находим следующее простое число.
             ICascadePrime iprimary = new CascadePrime();
 
             Assert.IsTrue(iprimary.Next() == 2);

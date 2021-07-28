@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("UnitTestPrimaryNum")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Danfoss")]
+[assembly: AssemblyCompany("DigitalModels")]
 [assembly: AssemblyProduct("UnitTestPrimaryNum")]
-[assembly: AssemblyCopyright("Copyright © Danfoss 2018")]
+[assembly: AssemblyCopyright("Copyright © DigitalModels 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

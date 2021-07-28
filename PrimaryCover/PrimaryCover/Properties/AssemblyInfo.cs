@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PrimaryCover")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Danfoss")]
+[assembly: AssemblyCompany("DigitalModels")]
 [assembly: AssemblyProduct("PrimaryCover")]
-[assembly: AssemblyCopyright("Copyright © Danfoss 2018")]
+[assembly: AssemblyCopyright("Copyright © DigitalModels 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
